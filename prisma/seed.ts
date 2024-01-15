@@ -6,6 +6,12 @@ const prisma = new PrismaClient();
 async function main() {
   const pokemonData = [
     {
+      name: "Bulbasaur",
+      types: ["Grass", "Poison"],
+      sprite:
+        "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
+    },
+    {
       name: "Charmander",
       types: ["Fire"],
       sprite:
