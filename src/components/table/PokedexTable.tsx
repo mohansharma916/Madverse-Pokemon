@@ -12,6 +12,7 @@ import TableContainer from "@mui/material/TableContainer";
 import Load from "../skeleton";
 import TableLayout from "./Container";
 import { usePokemonArray } from "@/hooks/usePokemonArray";
+import Image from "next/image";
 
 type PokedexTableProps = {
   selectedType: string[] | [];
@@ -61,7 +62,7 @@ const PokedexTable: React.FC<PokedexTableProps> = ({ selectedType }) => {
                 ))}
               </TableCell>
               <TableCell align="right">
-                <img
+                <Image
                   src={pok.sprite}
                   alt={pok.name}
                   style={{ maxWidth: "50px" }}

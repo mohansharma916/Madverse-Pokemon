@@ -6,7 +6,9 @@ import { TableRow, TableCell, Chip, Avatar } from "@mui/material";
 //   pokemon: PokemonOuputType;
 // };
 
-const PokemonRow = ({ pokemon }) => {
+import Image from "next/image";
+
+const PokemonRow = ({ pokemon }: any) => {
   return (
     <TableRow
       key={pokemon?.id}
@@ -18,7 +20,7 @@ const PokemonRow = ({ pokemon }) => {
       <TableCell align="center">{pokemon?.name}</TableCell>
 
       <TableCell align="center">
-        {pokemon?.types.map((type) => (
+        {pokemon?.types.map((type: any) => (
           <Chip
             key={type.name}
             label={type.name}
@@ -28,7 +30,7 @@ const PokemonRow = ({ pokemon }) => {
         ))}
       </TableCell>
       <TableCell align="center">
-        <img
+        <Image
           src={pokemon?.sprite}
           alt={pokemon?.name}
           style={{ maxWidth: "50px" }}
