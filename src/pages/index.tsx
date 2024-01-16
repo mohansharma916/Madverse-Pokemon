@@ -4,6 +4,7 @@ import Form from "@/components/Form";
 import { Container } from "@mui/material";
 import ArrayForm from "@/components/ArrayForm";
 import FilterablePokedexTable from "@/components/filter/FilterablePokedexTable";
+import { headers } from "next/headers";
 
 export default function Home() {
   return (
